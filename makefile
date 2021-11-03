@@ -12,12 +12,16 @@ MAIN = main.o
 all: libclassloops.a libclassrec.a libclassloops.so libclassrec.so mains maindloop maindrec
 
 #creat libraries
+loops: libclassloops.a
 libclassloops.a: $(STATIC_LOOP)
 	$(AR) -rcs libclassloops.a $(STATIC_LOOP)
+recursives: libclassrec.a
 libclassrec.a: $(STATIC_RECURSION)
 	$(AR) -rcs libclassrec.a $(STATIC_RECURSION)
+loopd: libclassloops.so
 libclassloops.so: $(DYNAMIC_LOOP)
 	$(CC) -shared -o libclassloops.so $(DYNAMIC_LOOP)
+recursived: libclassrec.so
 libclassrec.so: $(DYNAMIC_RECURSION)
 	$(CC) -shared -o libclassrec.so $(DYNAMIC_RECURSION)
 
