@@ -11,7 +11,7 @@ int main(){
         a=b;
         b=temp;
     }
-    printf("\nThe Armstrong numbers are:");
+    printf("The Armstrong numbers are:");
     for (int i=a ; i<=b ; i++){
         if (isArmstrong(i)==1) printf(" %d" , i);
     }
@@ -19,7 +19,7 @@ int main(){
     for (int i=a ; i<=b ; i++){
         if (isPalindrome(i)==1) printf(" %d" , i);
     }
-    printf("The Prime numbers are:");
+    printf("\nThe Prime numbers are:");
     for (int i=a ; i<=b ; i++){
         if (isPrime(i)==1) printf(" %d" , i);
     }
