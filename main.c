@@ -11,6 +11,14 @@ int main(){
         a=b;
         b=temp;
     }
+    if (a<=0){
+        printf("%d is an unacceptable number, have been changed to 1\n" , a);
+        a=1;
+    }
+    if(b<=0){
+        printf("%d is an unacceptable number, have been changed to 1\n" , b);
+        b=1;
+    }
     printf("The Armstrong numbers are:");
     for (int i=a ; i<=b ; i++){
         if (isArmstrong(i)==1) printf(" %d" , i);
